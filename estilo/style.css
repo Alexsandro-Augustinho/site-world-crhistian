@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "heavitas";
+    src: url(../fontes/heavitas/Heavitas.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eloura";
+    src: url(../fontes/Eloura/Eloura\ Sans.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Heavy";
+    src: url(../fontes/Mont/Mont-HeavyDEMO.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "cocogoose";
+    src: url(../fontes/cocogoose/Cocogoose-Pro-Regular-trial.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+:root{
+    --cor01:#7B3F00;
+    --cor02:#C47B2B;
+    --cor03:#F5E6C8;
+    --cor04:#FFF8EE;
+    --cor05:#3D1F00;
+
+    --font01: "heavitas", sans-serif;
+    --font02: "Eloura", sans-serif;
+    --font03: "Heavy", sans-serif;
+    --font04: "cocogoose", sans-serif
+}
+h1{
+    font-family: var(--font03);
+    font-variant: small-caps;
+}
+article h2{
+    background-color: var(--cor03);
+    font-family: var(--font04);
+    border-left: 6px solid var(--cor01);
+    padding: 4px;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    font-variant: small-caps;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor02), var(--cor01));
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+    width: 100%;
+}
+header h1{
+    text-transform: uppercase;
+    font-family: var(--font03);
+    padding-top: 6%;
+}
+
+header p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4%;
+}
+
+nav{
+    background-color: var(--cor01);
+    text-align: center;
+    padding: 10px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding-right: 15px ;
+    padding-left: 15px;
+    font-family: var(--font03);
+}
+
+nav >a:hover{
+    background-color: var(--cor05);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+main{
+    background-color: var(--cor03);
+    max-width: 800px;
+    min-width: 260px;
+    margin: auto;
+    padding: 20px;
+    height: auto;
+}
+/*tabelas*/
+body table{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-collapse: collapse
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+div#container{
+    overflow-x: auto;
+}
+/* Estilizando a paggina home*/
+section#hero{
+    background-image: url(../images/fundo01.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+     /*tamanho da secao*/
+     height: 600px;
+
+     /*Pai precisa de position relative*/
+     position: relative;
+
+     border-radius: 10px;
+}
+
+div#hero-conteudo{
+    /*Filho tem que ter position absolute*/
+    position: absolute;
+
+    /* Mover para o centro do pai*/
+    left: 50%;
+    top: 50%;
+
+    /* corrigir o posicionamento usando o proprio tamanho*/
+     transform: translate(-50%, -50%);
+
+    /* estilo visual */
+    text-align: center;
+    background-color: rgba(132, 170, 219, 0.432);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
+    border-radius: 20px;
+    padding: 10px;
+    color: var(--cor04);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.349);
+    width: 70%;
+}
+
+/* -----------Cards----------- */
+#cards{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.card{
+   display: inline-block;
+   vertical-align: top;
+   width: 60%;
+   padding: 25px 20px;
+   margin: 1%;
+   background-color: white;
+   border-radius: 12px;
+   text-align: left;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0,0.267);
+   border-top: 4px solid var(--cor02);
+   line-height: 140%;
+}
+
+.card:hover{
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+div.card > h3{
+    font-family: var(--font01);
+    letter-spacing: 2px;
+    overflow-wrap: break-word;
+    
+}
+
+div.card > p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside{
+    background-color: var(--cor02);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
+}
+
+aside ul{
+    list-style-type: '\271D\00A0';
+    list-style-position: inside;
+    columns: 2;
+    gap: 20px;
+    font-size: 0.9em;
+}
+
+aside ol{
+    list-style-position: inside;
+    columns: 2;
+    gap: 20px;
+    font-size: 0.9em;
+}
+
+aside h2{
+    letter-spacing: 2px;
+    font-family: var(--font03);
+}
+
+aside li{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px 4px;
+    break-inside: avoid;
+}
+aside ul li:hover {
+    transition: 0.5s;
+    background-color: rgba(255, 252, 252, 0.2);
+    padding-left: 10px;
+    border-radius: 10px;
+} 
+aside ol li:hover{
+    transition: 0.5s;
+    background-color: rgba(255, 252, 252, 0.2);
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+/* IMAGENS */
+/* imagem grande — ocupa tudo */
+article picture img.img-grande {
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+}
+
+/* imagem pequena — centralizada e menor */
+@media (max-width: 810px) {
+    article picture img.img-grande {
+        width: 60%;
+        margin: 20px auto;
+    }
+}
+/*centralizando o video*/
+div.video{
+    background-color: var(--cor02);
+    margin: 30px 20px;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 56%;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    background-image: linear-gradient(to left, var(--cor01), var(--cor02));
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+footer a:hover{
+    background-color: var(--cor03);
+    padding: 10px;
+    color: var(--cor05);
+    border-radius: 10px;
+    font-weight: bolder;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.144);
+}
+iframe{
+    height: 80px;
+    width: 200;  
+}
