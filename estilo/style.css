@@ -100,6 +100,23 @@ nav >a:hover{
     border-radius: 10px;
     transition: 0.3s;
 }
+
+main nav{
+    background-color:var(--cor02);
+    margin: 10px;
+}
+
+main nav a{
+    background-color: var(--cor01);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+main nav a:hover{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 main{
     background-color: var(--cor03);
     max-width: 800px;
